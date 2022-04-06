@@ -12,7 +12,7 @@ let rec merge_sort lst =
             match tll with
             | [] -> []
             | htll :: ttll ->
-                if List.length hll < (List.length (h :: t))/2 then
+                if List.length hll < (List.length ll)/2 then
                   split ((hll @ [h]) :: (htll :: ttll)) t
                 else
                   split (hll :: [(htll @ [h])]) t
@@ -56,7 +56,9 @@ let num_list = merge_sort [5;4;3;2;1];;
 let num_sorted = merge_sort [5;5;4;4;3;3;2;0];;
 let num_sorted_three = merge_sort [];;
 let num_sorted_four = merge_sort [1;1;1;1;1];;
+let num_sorted_five = merge_sort [55;33;66;77;100;1;2;20;23;54;50];;
 print_lst num_list;;
 print_lst num_sorted;;
 print_lst num_sorted_three;;
 print_lst num_sorted_four;;
+print_lst num_sorted_five;;
