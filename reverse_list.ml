@@ -1,8 +1,4 @@
-let rec reverse l =
-  match l with
-  | [] -> []
-  | h :: t -> 
-      (reverse t) @ [h];;
+let rec reverse l = match l with [] -> [] | h :: t -> reverse t @ [ h ]
 
 let rec print_lst lst =
   match lst with
@@ -10,6 +6,7 @@ let rec print_lst lst =
   | h :: t ->
       print_int h;
       print_newline ();
-      print_lst t;;
+      print_lst t
+;;
 
-print_lst (reverse [1;2;3]);;
+print_lst (reverse [ 1; 2; 3 ])
